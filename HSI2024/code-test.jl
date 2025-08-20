@@ -10,6 +10,7 @@
   end
 
 # %%
+  using Plots
   T(x) = mod(1/x,1)
   @time v = orbit(T, 1/π, 1000000)
   plt = histogram(v, normalize = :pdf, label = "Empirical", bins = 100)
